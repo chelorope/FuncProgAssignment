@@ -1,0 +1,18 @@
+{ print }
+BEGIN { print ""NR: "", NR, ""NF: ", NF, "$0: ", $0, "$1: ", $1 }; END { print "NR: ", NR, "NF: ", NF, "$0: ", $0, "$1: ", $1 }
+{}
+1 > 0 { print }
+{ if (NF > max) max = NF }; END { print max }
+NF > 0
+{ if (NF > 0) print }
+{ nlines++ }; END { print nlines }
+{ nfields += NF }; END { print nfields }
+{ if (NR > 1) exit; print }; END { print "The end" }
+{ print NR, $0 }
+!(NR >= 5) { for (f=1; f <= 3; ++f) if ($f != "") print $f }
+{ line = $0 }; { print line }
+{ one = 1 }; { lines += one }; END { print lines }
+{ while (i < NF) i++ }; END { print i }
+{ i = 0; while (i < NF) i++ }; { f += i }; END { print f }
+{ print }; END { print "END" }; BEGIN { print "BEGIN" }
+END { print "end 1" }; BEGIN { print "begin 1" }; END { print "end 2" }; BEGIN { print "begin 2" }

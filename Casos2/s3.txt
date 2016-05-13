@@ -1,0 +1,9 @@
+seleccion del ultimo campo
+3
+1
+2
+50
+tal
+todo
+nada
+5

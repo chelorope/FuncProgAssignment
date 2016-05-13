@@ -1,0 +1,4 @@
+probando el exit
+9 8 7 6 5
+10 20 -30 99
+Se termina
